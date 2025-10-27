@@ -28,6 +28,7 @@ namespace IPGeoLocationApi
             var response = await httpClient.GetAsync($"{apiUrl}/ipgeo?apiKey={apiKey}&ip={ip}");
             return await response.Content.ReadAsStringAsync();
         }
+        
         public async Task<string> GetMyIp()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/ipgeo?apiKey={apiKey}");
